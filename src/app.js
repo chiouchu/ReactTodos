@@ -28,7 +28,6 @@ class App extends Component {
     }
 
     render() {
-        console.log('render');
         return (
             <div>
                 <h1>React Todo List</h1>
