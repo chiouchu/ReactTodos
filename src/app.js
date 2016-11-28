@@ -70,7 +70,6 @@ class App extends Component {
     _completeTask(idx) {
         let newTodos = [...this.state.todos];
         newTodos[idx] = Object.assign({}, newTodos[idx], { isCompleted: !newTodos[idx].isCompleted });
-        console.log(newTodos[idx]);
         this.setState({ todos: newTodos });
     }
 }
