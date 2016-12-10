@@ -15,17 +15,17 @@ class App extends Component {
     }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
     return {
         filter: state.filter
     };
-}
+};
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
     return {
         filterActions: bindActionCreators(FilterActions, dispatch)
     };
-}
+};
 
 const FilterContainer = connect(
     mapStateToProps,

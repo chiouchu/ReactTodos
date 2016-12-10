@@ -29,18 +29,18 @@ class App extends Component {
     }
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
     return {
         todos: state.todos,
         filter: state.filter
     };
-}
+};
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
     return {
         todosActions: bindActionCreators(TodosActions, dispatch)
     };
-}
+};
 
 const TodoAppContainer = connect(
     mapStateToProps,
