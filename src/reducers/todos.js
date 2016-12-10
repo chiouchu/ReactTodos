@@ -13,7 +13,7 @@ export default function todos(state = [], action) {
         case types.EDIT_TASK:
             return [
                 ...state.slice(0, action.idx),
-                Object.assign({}, state[idx], {
+                Object.assign({}, state[action.idx], {
                     task: action.task
                 }),
                 ...state.slice(action.idx + 1)
@@ -26,8 +26,8 @@ export default function todos(state = [], action) {
         case types.TOGGLE_TASK:
             return [
                 ...state.slice(0, action.idx),
-                Object.assign({}, state[idx], {
-                    isCompleted: !state[idx].isCompleted
+                Object.assign({}, state[action.idx], {
+                    isCompleted: !state[action.idx].isCompleted
                 }),
                 ...state.slice(action.idx + 1)
             ];
