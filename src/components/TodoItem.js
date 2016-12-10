@@ -58,7 +58,7 @@ class TodoItem extends Component {
 
     _onSaveClick() {
         const input = this.refs.editInput;
-        this.props.saveTask(input.getAttribute('data-idx'), input.value);
+        this.props.saveTask(+input.getAttribute('data-idx'), input.value);
         this.setState({ isEditing: false });
     }
 }
